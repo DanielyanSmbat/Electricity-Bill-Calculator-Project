@@ -1,0 +1,981 @@
+<!doctype html>
+<!--[if lt IE 7]>   <html class="no-js ie6 lt-ie7 lt-ie8 lt-ie9">   <![endif]-->
+<!--[if IE 7]>      <html class="no-js ie7 lt-ie8 lt-ie9">          <![endif]-->
+<!--[if IE 8]>      <html class="no-js ie8 lt-ie9">                 <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr">  <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="prefetch" href="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+    <link rel="prefetch" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+
+    <meta name="application-name" content="Python.org">
+    <meta name="msapplication-tooltip" content="The official home of the Python Programming Language">
+    <meta name="apple-mobile-web-app-title" content="Python.org">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta http-equiv="imagetoolbar" content="false">
+
+    <script src="/static/js/libs/modernizr.js"></script>
+
+    <link href="/static/stylesheets/style.b50cef9e3bb9.css" rel="stylesheet" type="text/css" title="default" />
+    <link href="/static/stylesheets/mq.eef77a5d2257.css" rel="stylesheet" type="text/css" media="not print, braille, embossed, speech, tty" />
+    
+
+    <!--[if (lte IE 8)&(!IEMobile)]>
+    <link href="/static/stylesheets/no-mq.e636abc55522.css" rel="stylesheet" type="text/css" media="screen" />
+    
+    
+    <![endif]-->
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+    
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/static/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/static/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/static/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/static/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="/static/apple-touch-icon-precomposed.png">
+
+    
+    <meta name="msapplication-TileImage" content="/static/metro-icon-144x144-precomposed.png"><!-- white shape -->
+    <meta name="msapplication-TileColor" content="#3673a5"><!-- python blue -->
+    <meta name="msapplication-navbutton-color" content="#3673a5">
+
+    <title>Python Release Python 3.9.2 | Python.org</title>
+
+    <meta name="description" content="The official home of the Python Programming Language">
+    <meta name="keywords" content="Python programming language object oriented web free open source software license documentation download community">
+
+    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Python.org">
+    <meta property="og:title" content="Python Release Python 3.9.2">
+    <meta property="og:description" content="The official home of the Python Programming Language">
+    
+    <meta property="og:image" content="https://www.python.org/static/opengraph-icon-200x200.png">
+    <meta property="og:image:secure_url" content="https://www.python.org/static/opengraph-icon-200x200.png">
+    
+    <meta property="og:url" content="https://www.python.org/downloads/release/python-392/">
+
+    <link rel="author" href="/static/humans.txt">
+
+    <link rel="alternate" type="application/rss+xml" title="Python Enhancement Proposals"
+          href="https://www.python.org/dev/peps/peps.rss/">
+    <link rel="alternate" type="application/rss+xml" title="Python Job Opportunities"
+          href="https://www.python.org/jobs/feed/rss/">
+    <link rel="alternate" type="application/rss+xml" title="Python Software Foundation News"
+          href="https://feeds.feedburner.com/PythonSoftwareFoundationNews">
+    <link rel="alternate" type="application/rss+xml" title="Python Insider"
+          href="https://feeds.feedburner.com/PythonInsider">
+
+    
+
+    
+    <script type="application/ld+json">
+     {
+       "@context": "https://schema.org",
+       "@type": "WebSite",
+       "url": "https://www.python.org/",
+       "potentialAction": {
+         "@type": "SearchAction",
+         "target": "https://www.python.org/search/?q={search_term_string}",
+         "query-input": "required name=search_term_string"
+       }
+     }
+    </script>
+
+    
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39055973-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+    
+</head>
+
+<body class="python downloads">
+
+    <div id="touchnav-wrapper">
+
+        <div id="nojs" class="do-not-print">
+            <p><strong>Notice:</strong> While Javascript is not essential for this website, your interaction with the content will be limited. Please turn Javascript on for the full experience. </p>
+        </div>
+
+        <!--[if lte IE 8]>
+        <div id="oldie-warning" class="do-not-print">
+            <p>
+                <strong>Notice:</strong> Your browser is <em>ancient</em>. Please
+                <a href="http://browsehappy.com/">upgrade to a different browser</a> to experience a better web.
+            </p>
+        </div>
+        <![endif]-->
+
+        <!-- Sister Site Links -->
+        <div id="top" class="top-bar do-not-print">
+
+            <nav class="meta-navigation container" role="navigation">
+
+                
+                <div class="skip-link screen-reader-text">
+                    <a href="#content" title="Skip to content">Skip to content</a>
+                </div>
+
+                
+                <a id="close-python-network" class="jump-link" href="#python-network" aria-hidden="true">
+                    <span aria-hidden="true" class="icon-arrow-down"><span>&#9660;</span></span> Close
+                </a>
+
+                
+
+<ul class="menu" role="tree">
+    
+    <li class="python-meta ">
+        <a href="/" title="The Python Programming Language" >Python</a>
+    </li>
+    
+    <li class="psf-meta ">
+        <a href="/psf-landing/" title="The Python Software Foundation" >PSF</a>
+    </li>
+    
+    <li class="docs-meta ">
+        <a href="https://docs.python.org" title="Python Documentation" >Docs</a>
+    </li>
+    
+    <li class="pypi-meta ">
+        <a href="https://pypi.org/" title="Python Package Index" >PyPI</a>
+    </li>
+    
+    <li class="jobs-meta ">
+        <a href="/jobs/" title="Python Job Board" >Jobs</a>
+    </li>
+    
+    <li class="shop-meta ">
+        <a href="/community-landing/"  >Community</a>
+    </li>
+    
+</ul>
+
+
+                <a id="python-network" class="jump-link" href="#top" aria-hidden="true">
+                    <span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> The Python Network
+                </a>
+
+            </nav>
+
+        </div>
+
+        <!-- Header elements -->
+        <header class="main-header" role="banner">
+            <div class="container">
+
+                <h1 class="site-headline">
+                    <a href="/"><img class="python-logo" src="/static/img/python-logo.png" alt="python&trade;"></a>
+                </h1>
+
+                <div class="options-bar-container do-not-print">
+                    <a href="https://psfmember.org/civicrm/contribute/transact?reset=1&id=2" class="donate-button">Donate</a>
+                    <div class="options-bar">
+                        
+                        <a id="site-map-link" class="jump-to-menu" href="#site-map"><span class="menu-icon">&equiv;</span> Menu</a><form class="search-the-site" action="/search/" method="get">
+                            <fieldset title="Search Python.org">
+
+                                <span aria-hidden="true" class="icon-search"></span>
+
+                                <label class="screen-reader-text" for="id-search-field">Search This Site</label>
+                                <input id="id-search-field" name="q" type="search" role="textbox" class="search-field" placeholder="Search" value="" tabindex="1">
+
+                                <button type="submit" name="submit" id="submit" class="search-button" title="Submit this Search" tabindex="3">
+                                    GO
+                                </button>
+
+                                
+                                <!--[if IE]><input type="text" style="display: none;" disabled="disabled" size="1" tabindex="4"><![endif]-->
+
+                            </fieldset>
+                        </form><span class="breaker"></span><div class="adjust-font-size" aria-hidden="true">
+                            <ul class="navigation menu" aria-label="Adjust Text Size on Page">
+                                <li class="tier-1 last" aria-haspopup="true">
+                                    <a href="#" class="action-trigger"><strong><small>A</small> A</strong></a>
+                                    <ul class="subnav menu">
+                                        <li class="tier-2 element-1" role="treeitem"><a class="text-shrink" title="Make Text Smaller" href="javascript:;">Smaller</a></li>
+                                        <li class="tier-2 element-2" role="treeitem"><a class="text-grow" title="Make Text Larger" href="javascript:;">Larger</a></li>
+                                        <li class="tier-2 element-3" role="treeitem"><a class="text-reset" title="Reset any font size changes I have made" href="javascript:;">Reset</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div><div class="winkwink-nudgenudge">
+                            <ul class="navigation menu" aria-label="Social Media Navigation">
+                                <li class="tier-1 last" aria-haspopup="true">
+                                    <a href="#" class="action-trigger">Socialize</a>
+                                    <ul class="subnav menu">
+                                        <li class="tier-2 element-1" role="treeitem"><a href="https://www.facebook.com/pythonlang?fref=ts"><span aria-hidden="true" class="icon-facebook"></span>Facebook</a></li>
+                                        <li class="tier-2 element-2" role="treeitem"><a href="https://twitter.com/ThePSF"><span aria-hidden="true" class="icon-twitter"></span>Twitter</a></li>
+                                        <li class="tier-2 element-3" role="treeitem"><a href="/community/irc/"><span aria-hidden="true" class="icon-freenode"></span>Chat on IRC</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <span data-html-include="/authenticated"></span>
+                    </div><!-- end options-bar -->
+                </div>
+
+                <nav id="mainnav" class="python-navigation main-navigation do-not-print" role="navigation">
+                    
+                        
+<ul class="navigation menu" role="menubar" aria-label="Main Navigation">
+  
+    
+    
+    <li id="about" class="tier-1 element-1  " aria-haspopup="true">
+        <a href="/about/" title="" class="">About</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/about/apps/" title="">Applications</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/about/quotes/" title="">Quotes</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/about/gettingstarted/" title="">Getting Started</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/about/help/" title="">Help</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://brochure.getpython.info/" title="">Python Brochure</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="downloads" class="tier-1 element-2  " aria-haspopup="true">
+        <a href="/downloads/" title="" class="">Downloads</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/downloads/" title="">All releases</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/downloads/source/" title="">Source code</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/downloads/windows/" title="">Windows</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/downloads/mac-osx/" title="">Mac OS X</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/download/other/" title="">Other Platforms</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="https://docs.python.org/3/license.html" title="">License</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/download/alternatives" title="">Alternative Implementations</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="documentation" class="tier-1 element-3  " aria-haspopup="true">
+        <a href="/doc/" title="" class="">Documentation</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/doc/" title="">Docs</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/doc/av" title="">Audio/Visual Talks</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://wiki.python.org/moin/BeginnersGuide" title="">Beginner&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="https://devguide.python.org/" title="">Developer&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://docs.python.org/faq/" title="">FAQ</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="http://wiki.python.org/moin/Languages" title="">Non-English Docs</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="http://python.org/dev/peps/" title="">PEP Index</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="https://wiki.python.org/moin/PythonBooks" title="">Python Books</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="/doc/essays/" title="">Python Essays</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="community" class="tier-1 element-4  " aria-haspopup="true">
+        <a href="/community/" title="" class="">Community</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/community/survey" title="">Community Survey</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/community/diversity/" title="">Diversity</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/community/lists/" title="">Mailing Lists</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/community/irc/" title="">IRC</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/community/forums/" title="">Forums</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/psf/annual-report/2020/" title="">PSF Annual Impact Report</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/community/workshops/" title="">Python Conferences</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="/community/sigs/" title="">Special Interest Groups</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="/community/logos/" title="">Python Logo</a></li>
+    
+        <li class="tier-2 element-10" role="treeitem"><a href="https://wiki.python.org/moin/" title="">Python Wiki</a></li>
+    
+        <li class="tier-2 element-11" role="treeitem"><a href="/community/merchandise/" title="">Merchandise</a></li>
+    
+        <li class="tier-2 element-12" role="treeitem"><a href="/community/awards" title="">Community Awards</a></li>
+    
+        <li class="tier-2 element-13" role="treeitem"><a href="/psf/conduct/" title="">Code of Conduct</a></li>
+    
+        <li class="tier-2 element-14" role="treeitem"><a href="/psf/get-involved/" title="">Get Involved</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="success-stories" class="tier-1 element-5  " aria-haspopup="true">
+        <a href="/success-stories/" title="success-stories" class="">Success Stories</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/success-stories/category/arts/" title="">Arts</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/success-stories/category/business/" title="">Business</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/success-stories/category/education/" title="">Education</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/success-stories/category/engineering/" title="">Engineering</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/success-stories/category/government/" title="">Government</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/success-stories/category/scientific/" title="">Scientific</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/success-stories/category/software-development/" title="">Software Development</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="news" class="tier-1 element-6  " aria-haspopup="true">
+        <a href="/blogs/" title="News from around the Python world" class="">News</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/blogs/" title="Python Insider Blog Posts">Python News</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/newsletter/" title="Python Software Foundation Newsletter">PSF Newsletter</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="http://planetpython.org/" title="Planet Python">Community News</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="http://pyfound.blogspot.com/" title="PSF Blog">PSF News</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://pycon.blogspot.com/" title="PyCon Blog">PyCon News</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    <li id="events" class="tier-1 element-7  " aria-haspopup="true">
+        <a href="/events/" title="" class="">Events</a>
+        
+            
+
+<ul class="subnav menu" role="menu" aria-hidden="true">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/events/python-events" title="">Python Events</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/events/python-user-group/" title="">User Group Events</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/events/python-events/past/" title="">Python Events Archive</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/events/python-user-group/past/" title="">User Group Events Archive</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://wiki.python.org/moin/PythonEventsCalendar#Submitting_an_Event" title="">Submit an Event</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    
+    
+    
+  
+</ul>
+
+                    
+                </nav>
+
+                <div class="header-banner "> <!-- for optional "do-not-print" class -->
+                    
+                    
+                </div>
+
+                
+                
+
+             </div><!-- end .container -->
+        </header>
+
+        <div id="content" class="content-wrapper">
+            <!-- Main Content Column -->
+            <div class="container">
+
+                <section class="main-content " role="main">
+
+                    
+
+
+<ul class="breadcrumbs menu">
+	
+</ul>
+
+
+
+                    
+
+                    
+    <article class="text">
+
+        <header class="article-header">
+            <h1 class="page-title">Python 3.9.2</h1>
+        </header>
+
+        <p><strong>Release Date:</strong> Feb. 19, 2021</p>
+
+        
+        <h2>This is the second maintenance release of Python 3.9</h2>
+<p>Python 3.9.2 is the newest major release of the Python programming language, and it contains many new features and optimizations. We've made 166 commits since 3.9.1, among which you can find two security fixes:</p>
+<ul>
+<li>
+<p><a href="https://bugs.python.org/issue42938">bpo-42938</a>: Avoid static buffers when computing the repr of <code>ctypes.c_double</code> and <code>ctypes.c_longdouble</code> values. This issue was assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-3177">CVE-2021-3177</a>.</p>
+</li>
+<li>
+<p><a href="https://bugs.python.org/issue42967">bpo-42967</a>: Fix web cache poisoning vulnerability by defaulting the query args separator to <code>&amp;</code>, and allowing the user to choose a custom separator. This issue was assigned <a href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-23336">CVE-2021-23336</a>.</p>
+</li>
+</ul>
+<h2>Major new features of the 3.9 series, compared to 3.8</h2>
+<p>Some of the new major new features and changes in Python 3.9 are:</p>
+<ul>
+<li><a href="https://www.python.org/dev/peps/pep-0573/">PEP 573</a>, Module State Access from C Extension Methods</li>
+<li><a href="https://www.python.org/dev/peps/pep-0584/">PEP 584</a>, Union Operators in <code>dict</code></li>
+<li><a href="https://www.python.org/dev/peps/pep-0585/">PEP 585</a>, Type Hinting Generics In Standard Collections</li>
+<li><a href="https://www.python.org/dev/peps/pep-0593/">PEP 593</a>, Flexible function and variable annotations</li>
+<li><a href="https://www.python.org/dev/peps/pep-0602/">PEP 602</a>, Python adopts a stable annual release cadence</li>
+<li><a href="https://www.python.org/dev/peps/pep-0614/">PEP 614</a>, Relaxing Grammar Restrictions On Decorators</li>
+<li><a href="https://www.python.org/dev/peps/pep-0615/">PEP 615</a>, Support for the IANA Time Zone Database in the Standard Library</li>
+<li><a href="https://www.python.org/dev/peps/pep-0616/">PEP 616</a>, String methods to remove prefixes and suffixes</li>
+<li><a href="https://www.python.org/dev/peps/pep-0617/">PEP 617</a>, New PEG parser for CPython</li>
+<li><a href="https://bugs.python.org/issue38379">BPO 38379</a>, garbage collection does not block on resurrected objects;</li>
+<li><a href="https://bugs.python.org/issue38692">BPO 38692</a>, os.pidfd_open added that allows process management without races and signals;</li>
+<li><a href="https://bugs.python.org/issue39926">BPO 39926</a>, Unicode support updated to version 13.0.0;</li>
+<li><a href="https://bugs.python.org/issue1635741">BPO 1635741</a>, when Python is initialized multiple times in the same process, it does not leak memory anymore;</li>
+<li>A number of Python builtins (range, tuple, set, frozenset, list, dict) are now sped up using <a href="https://www.python.org/dev/peps/pep-0590">PEP 590</a> vectorcall;</li>
+<li>A number of Python modules (_abc, audioop, _bz2, _codecs, _contextvars, _crypt, _functools, _json, _locale, operator, resource, time, _weakref) now use multiphase initialization as defined by <a href="https://www.python.org/dev/peps/pep-0489/">PEP 489</a>;</li>
+<li>A number of standard library modules (audioop, ast, grp, _hashlib, pwd, _posixsubprocess, random, select, struct, termios, zlib) are now using the stable ABI defined by <a href="https://www.python.org/dev/peps/pep-0384/">PEP 384</a>.</li>
+</ul>
+<p>You can find a more comprehensive list in this release's "<a href="https://docs.python.org/release/3.9.0/whatsnew/3.9.html">What's New</a>" document.</p>
+<h2>More resources</h2>
+<ul>
+<li><a href="https://docs.python.org/3.9/">Online Documentation</a></li>
+<li><a href="https://www.python.org/dev/peps/pep-0596/">PEP 596</a>, 3.9 Release Schedule</li>
+<li>Report bugs at <a href="https://bugs.python.org">https://bugs.python.org</a>.</li>
+<li><a href="/psf/donations/">Help fund Python and its community</a>.</li>
+</ul>
+<h2>And now for something completely different</h2>
+<p><strong>Professor (<a href="http://www.montypython.50webs.com/scripts/Series_2/50.htm">Eric Idle</a>)</strong>: It's an entirely new strain of sheep, a killer sheep that can not only hold a rifle but is also a first-class shot. 
+<br><strong>Assistant (Carol Cleveland)</strong>: But where are they coming from, professor? 
+<br><strong>Professor</strong>: That I don't know. I just don't know. I really just don't know. I'm afraid <em>even I</em> really just don't know. I have to tell you I'm <em>afraid</em> even I really just don't know. I'm afraid I have to tell you...
+<br><small><em>(she hands him a glass of water which she had been busy getting as soon as he started into this speech)</em> ... thank you ... <em>(resuming normal breezy voice)</em></small>
+<br><strong>Professor</strong>: ... I don't know. Our only clue is this portion of wolf's clothing which the killer sheep... 
+<br><strong>Viking (Terry Gilliam)</strong>: ... was wearing... 
+<br><strong>Professor</strong>: ... in yesterday's raid on Selfridges.</p>
+        
+
+        
+        <p><a href="https://docs.python.org/release/3.9.2/whatsnew/changelog.html#changelog">Full Changelog</a></p>
+        
+
+        
+
+        <header class="article-header">
+            <h1 class="page-title">Files</h1>
+        </header>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Version</th>
+              <th>Operating System</th>
+              <th>Description</th>
+              <th>MD5 Sum</th>
+              <th>File Size</th>
+              <th>GPG</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/Python-3.9.2.tgz">Gzipped source tarball</a></td>
+                <td>Source release</td>
+                <td></td>
+                <td>8cf053206beeca72c7ee531817dc24c7</td>
+                <td>25399571</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/Python-3.9.2.tgz.asc">SIG</a></td>
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/Python-3.9.2.tar.xz">XZ compressed source tarball</a></td>
+                <td>Source release</td>
+                <td></td>
+                <td>f0dc9000312abeb16de4eccce9a870ab</td>
+                <td>18889164</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/Python-3.9.2.tar.xz.asc">SIG</a></td>
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-macosx10.9.pkg">macOS 64-bit Intel installer</a></td>
+                <td>Mac OS X</td>
+                <td>for macOS 10.9 and later</td>
+                <td>a64f8b297fa43be07a34b8af9d13d554</td>
+                <td>29845662</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-macosx10.9.pkg.asc">SIG</a></td>
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-macos11.pkg">macOS 64-bit universal2 installer</a></td>
+                <td>Mac OS X</td>
+                <td>for macOS 10.9 and later, including macOS 11 Big Sur on Apple Silicon (experimental)</td>
+                <td>fc8d028618c376d0444916950c73e263</td>
+                <td>37618901</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-macos11.pkg.asc">SIG</a></td>
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-embed-win32.zip">Windows embeddable package (32-bit)</a></td>
+                <td>Windows</td>
+                <td></td>
+                <td>cde7d9bfd87b7777d7f0ba4b0cd4506d</td>
+                <td>7578904</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-embed-win32.zip.asc">SIG</a></td>
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-embed-amd64.zip">Windows embeddable package (64-bit)</a></td>
+                <td>Windows</td>
+                <td></td>
+                <td>bd4903eb930cf1747be01e6b8dcdd28a</td>
+                <td>8408823</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-embed-amd64.zip.asc">SIG</a></td>
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python392.chm">Windows help file</a></td>
+                <td>Windows</td>
+                <td></td>
+                <td>e2308d543374e671ffe0344d3fd36062</td>
+                <td>8844275</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python392.chm.asc">SIG</a></td>
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2.exe">Windows installer (32-bit)</a></td>
+                <td>Windows</td>
+                <td></td>
+                <td>81294c31bd7e2d4470658721b2887ed5</td>
+                <td>27202848</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2.exe.asc">SIG</a></td>
+              </tr>
+            
+              <tr>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-amd64.exe">Windows installer (64-bit)</a></td>
+                <td>Windows</td>
+                <td>Recommended</td>
+                <td>efb20aa1b648a2baddd949c142d6eb06</td>
+                <td>28287512</td>
+                <td><a href="https://www.python.org/ftp/python/3.9.2/python-3.9.2-amd64.exe.asc">SIG</a></td>
+              </tr>
+            
+          </tbody>
+        </table>
+    </article>
+
+
+                </section>
+
+                
+                
+
+                
+                
+
+
+            </div><!-- end .container -->
+        </div><!-- end #content .content-wrapper -->
+
+        <!-- Footer and social media list -->
+        <footer id="site-map" class="main-footer" role="contentinfo">
+            <div class="main-footer-links">
+                <div class="container">
+
+                    
+                    <a id="back-to-top-1" class="jump-link" href="#python-network"><span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> Back to Top</a>
+
+                    
+
+<ul class="sitemap navigation menu do-not-print" role="tree" id="container">
+    
+    <li class="tier-1 element-1">
+        <a href="/about/" >About</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/about/apps/" title="">Applications</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/about/quotes/" title="">Quotes</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/about/gettingstarted/" title="">Getting Started</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/about/help/" title="">Help</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://brochure.getpython.info/" title="">Python Brochure</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-2">
+        <a href="/downloads/" >Downloads</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/downloads/" title="">All releases</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/downloads/source/" title="">Source code</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/downloads/windows/" title="">Windows</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/downloads/mac-osx/" title="">Mac OS X</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/download/other/" title="">Other Platforms</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="https://docs.python.org/3/license.html" title="">License</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/download/alternatives" title="">Alternative Implementations</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-3">
+        <a href="/doc/" >Documentation</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/doc/" title="">Docs</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/doc/av" title="">Audio/Visual Talks</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://wiki.python.org/moin/BeginnersGuide" title="">Beginner&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="https://devguide.python.org/" title="">Developer&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://docs.python.org/faq/" title="">FAQ</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="http://wiki.python.org/moin/Languages" title="">Non-English Docs</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="http://python.org/dev/peps/" title="">PEP Index</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="https://wiki.python.org/moin/PythonBooks" title="">Python Books</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="/doc/essays/" title="">Python Essays</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-4">
+        <a href="/community/" >Community</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/community/survey" title="">Community Survey</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/community/diversity/" title="">Diversity</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/community/lists/" title="">Mailing Lists</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/community/irc/" title="">IRC</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/community/forums/" title="">Forums</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/psf/annual-report/2020/" title="">PSF Annual Impact Report</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/community/workshops/" title="">Python Conferences</a></li>
+    
+        <li class="tier-2 element-8" role="treeitem"><a href="/community/sigs/" title="">Special Interest Groups</a></li>
+    
+        <li class="tier-2 element-9" role="treeitem"><a href="/community/logos/" title="">Python Logo</a></li>
+    
+        <li class="tier-2 element-10" role="treeitem"><a href="https://wiki.python.org/moin/" title="">Python Wiki</a></li>
+    
+        <li class="tier-2 element-11" role="treeitem"><a href="/community/merchandise/" title="">Merchandise</a></li>
+    
+        <li class="tier-2 element-12" role="treeitem"><a href="/community/awards" title="">Community Awards</a></li>
+    
+        <li class="tier-2 element-13" role="treeitem"><a href="/psf/conduct/" title="">Code of Conduct</a></li>
+    
+        <li class="tier-2 element-14" role="treeitem"><a href="/psf/get-involved/" title="">Get Involved</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-5">
+        <a href="/success-stories/" title="success-stories">Success Stories</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/success-stories/category/arts/" title="">Arts</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/success-stories/category/business/" title="">Business</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/success-stories/category/education/" title="">Education</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/success-stories/category/engineering/" title="">Engineering</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/success-stories/category/government/" title="">Government</a></li>
+    
+        <li class="tier-2 element-6" role="treeitem"><a href="/success-stories/category/scientific/" title="">Scientific</a></li>
+    
+        <li class="tier-2 element-7" role="treeitem"><a href="/success-stories/category/software-development/" title="">Software Development</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-6">
+        <a href="/blogs/" title="News from around the Python world">News</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/blogs/" title="Python Insider Blog Posts">Python News</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/psf/newsletter/" title="Python Software Foundation Newsletter">PSF Newsletter</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="http://planetpython.org/" title="Planet Python">Community News</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="http://pyfound.blogspot.com/" title="PSF Blog">PSF News</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="http://pycon.blogspot.com/" title="PyCon Blog">PyCon News</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-7">
+        <a href="/events/" >Events</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="/events/python-events" title="">Python Events</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="/events/python-user-group/" title="">User Group Events</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="/events/python-events/past/" title="">Python Events Archive</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/events/python-user-group/past/" title="">User Group Events Archive</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="https://wiki.python.org/moin/PythonEventsCalendar#Submitting_an_Event" title="">Submit an Event</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+    <li class="tier-1 element-8">
+        <a href="/dev/" >Contributing</a>
+        
+            
+
+<ul class="subnav menu">
+    
+        <li class="tier-2 element-1" role="treeitem"><a href="https://devguide.python.org/" title="">Developer&#39;s Guide</a></li>
+    
+        <li class="tier-2 element-2" role="treeitem"><a href="https://bugs.python.org/" title="">Issue Tracker</a></li>
+    
+        <li class="tier-2 element-3" role="treeitem"><a href="https://mail.python.org/mailman/listinfo/python-dev" title="">python-dev list</a></li>
+    
+        <li class="tier-2 element-4" role="treeitem"><a href="/dev/core-mentorship/" title="">Core Mentorship</a></li>
+    
+        <li class="tier-2 element-5" role="treeitem"><a href="/dev/security/" title="">Report a Security Issue</a></li>
+    
+</ul>
+
+        
+    </li>
+    
+</ul>
+
+
+                    <a id="back-to-top-2" class="jump-link" href="#python-network"><span aria-hidden="true" class="icon-arrow-up"><span>&#9650;</span></span> Back to Top</a>
+                    
+
+                </div><!-- end .container -->
+            </div> <!-- end .main-footer-links -->
+
+            <div class="site-base">
+                <div class="container">
+                    
+                    <ul class="footer-links navigation menu do-not-print" role="tree">
+                        <li class="tier-1 element-1"><a href="/about/help/">Help &amp; <span class="say-no-more">General</span> Contact</a></li>
+                        <li class="tier-1 element-2"><a href="/community/diversity/">Diversity <span class="say-no-more">Initiatives</span></a></li>
+                        <li class="tier-1 element-3"><a href="https://github.com/python/pythondotorg/issues">Submit Website Bug</a></li>
+                        <li class="tier-1 element-4">
+                            <a href="https://status.python.org/">Status <span class="python-status-indicator-default" id="python-status-indicator"></span></a>
+                        </li>
+                    </ul>
+
+                    <div class="copyright">
+                        <p><small>
+                            <span class="pre">Copyright &copy;2001-2021.</span>
+                            &nbsp;<span class="pre"><a href="/psf-landing/">Python Software Foundation</a></span>
+                            &nbsp;<span class="pre"><a href="/about/legal/">Legal Statements</a></span>
+                            &nbsp;<span class="pre"><a href="/privacy/">Privacy Policy</a></span>
+                            &nbsp;<span class="pre"><a href="/psf/sponsorship/sponsors/#heroku">Powered by Heroku</a></span>
+                        </small></p>
+                    </div>
+
+                </div><!-- end .container -->
+            </div><!-- end .site-base -->
+
+        </footer>
+
+    </div><!-- end #touchnav-wrapper -->
+
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-1.8.2.min.js"><\/script>')</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/static/js/libs/jquery-ui-1.12.1.min.js"><\/script>')</script>
+
+    <script src="/static/js/libs/masonry.pkgd.min.js"></script>
+    <script src="/static/js/libs/html-includes.js"></script>
+
+    <script type="text/javascript" src="/static/js/main-min.76b776ba706b.js" charset="utf-8"></script>
+    
+
+    <!--[if lte IE 7]>
+    <script type="text/javascript" src="/static/js/plugins/IE8-min.23a90e5f0320.js" charset="utf-8"></script>
+    
+    
+    <![endif]-->
+
+    <!--[if lte IE 8]>
+    <script type="text/javascript" src="/static/js/plugins/getComputedStyle-min.c3860be1d290.js" charset="utf-8"></script>
+    
+    
+    <![endif]-->
+
+    
+
+    
+    
+
+</body>
+</html>
+²;bu      `3f`3fŽB®iu`9Á   5    :https://www.python.org/downloads/release/python-392/ necko:classified 1 strongly-framed 1 security-info FnhllAKWRHGAlo+ESXykKAAAAAAAAAAAwAAAAAAAAEaphjojH6pBabDSgSnsfLHeAAAAAgAAAAAAAAAAAAAAAAAAAAEANQFmCjImkVxP+7sgiYWmMt8FvcOXmlQiTNWFiWlrbpbqgwAAAAAAAAgIMIIIBDCCBuygAwIBAgIQCgvu6rKU/G36blVsu5S6BzANBgkqhkiG9w0BAQsFADB1MQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3d3cuZGlnaWNlcnQuY29tMTQwMgYDVQQDEytEaWdpQ2VydCBTSEEyIEV4dGVuZGVkIFZhbGlkYXRpb24gU2VydmVyIENBMB4XDTIwMDkyOTAwMDAwMFoXDTIxMTAzMTAwMDAwMFowgdExHTAbBgNVBA8MFFByaXZhdGUgT3JnYW5pemF0aW9uMRMwEQYLKwYBBAGCNzwCAQMTAlVTMRkwFwYLKwYBBAGCNzwCAQITCERlbGF3YXJlMRAwDgYDVQQFEwczMzU5MzAwMQswCQYDVQQGEwJVUzEPMA0GA1UECBMGT3JlZ29uMRIwEAYDVQQHEwlCZWF2ZXJ0b24xIzAhBgNVBAoTGlB5dGhvbiBTb2Z0d2FyZSBGb3VuZGF0aW9uMRcwFQYDVQQDEw53d3cucHl0aG9uLm9yZzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAKb7uzSV2u41/YZbs+vvB5ob5BVQtKYKg+npgFfdvn/yMuG5VrvliokKJL3RtQGQDGZmYkhsUah2yiYCsQ0dzjBUquG1yxzprRkn1/m/dtwDjH8+mm+tmy80sSVp3TVCnnDuuzazxe0HBGcRM8yqnW5aN+AXV074UUuRRx0ixZy3ttoHl66MMshcFdJ1mKOKm1ZKCque4Ydk1EizWSjiDtIj4wRzHbOjuGtZrbv+uw396ILmI6oIAcKIC7VkteEe2s04cXOh7inQgw+fMeiVEnLs+TADNAvYG+4zYNk1ddL3QxiqYTldJyyUAdIdE5+Q1U2kJrVQnCvAWCAMFVElBzkCAwEAAaOCBDEwggQtMB8GA1UdIwQYMBaAFD3TUKXWoK3u80pgCmXTIdT4+NYPMB0GA1UdDgQWBBREsu1+8w+FHnZxpf7ioOhf7b0BVjCCAVQGA1UdEQSCAUswggFHgg53d3cucHl0aG9uLm9yZ4IPZG9jcy5weXRob24ub3Jngg9idWdzLnB5dGhvbi5vcmeCD3dpa2kucHl0aG9uLm9yZ4INaGcucHl0aG9uLm9yZ4IPbWFpbC5weXRob24ub3Jngg9weXBpLnB5dGhvbi5vcmeCFHBhY2thZ2luZy5weXRob24ub3JnghBsb2dpbi5weXRob24ub3Jnggx1cy5weWNvbi5vcmeCCHB5cGkub3JnggdweXBpLmlvggxkb2NzLnB5cGkuaW+CDWRvY3MucHlwaS5vcmeCDmRvbmF0ZS5weXBpLmlvgg9kb25hdGUucHlwaS5vcmeCE2Rldmd1aWRlLnB5dGhvbi5vcmeCE3d3dy5idWdzLnB5dGhvbi5vcmeCCnB5dGhvbi5vcmeCFGRvd25sb2Fkcy5weXRob24ub3JnMA4GA1UdDwEB/wQEAwIFoDAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwdQYDVR0fBG4wbDA0oDKgMIYuaHR0cDovL2NybDMuZGlnaWNlcnQuY29tL3NoYTItZXYtc2VydmVyLWczLmNybDA0oDKgMIYuaHR0cDovL2NybDQuZGlnaWNlcnQuY29tL3NoYTItZXYtc2VydmVyLWczLmNybDBLBgNVHSAERDBCMDcGCWCGSAGG/WwCATAqMCgGCCsGAQUFBwIBFhxodHRwczovL3d3dy5kaWdpY2VydC5jb20vQ1BTMAcGBWeBDAEBMIGIBggrBgEFBQcBAQR8MHowJAYIKwYBBQUHMAGGGGh0dHA6Ly9vY3NwLmRpZ2ljZXJ0LmNvbTBSBggrBgEFBQcwAoZGaHR0cDovL2NhY2VydHMuZGlnaWNlcnQuY29tL0RpZ2lDZXJ0U0hBMkV4dGVuZGVkVmFsaWRhdGlvblNlcnZlckNBLmNydDAMBgNVHRMBAf8EAjAAMIIBBQYKKwYBBAHWeQIEAgSB9gSB8wDxAHcA9lyUL9F3MCIUVBgIMJRWjuNNExkzv98MLyALzE7xZOMAAAF02oPpyAAABAMASDBGAiEArg/ruTBvWubivrxwRytv8VGCpA3yVHTaKFiObDBcHrcCIQCFzUvPib7qJGqbLP5IWY11D6sxJvv/ZvIopE0SZW6CrAB2AFzcQ5L+5qtFRLFemtRW5hA3+9X6R9yhc5Sy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 request-method GET response-head HTTP/2 200 OK
+server: nginx
+content-type: text/html; charset=utf-8
+x-frame-options: DENY
+cache-control: max-age=604800, public
+via: 1.1 vegur, 1.1 varnish, 1.1 varnish
+accept-ranges: bytes
+date: Mon, 22 Feb 2021 08:06:41 GMT
+age: 229837
+x-served-by: cache-bwi5135-BWI, cache-fra19140-FRA
+x-cache: HIT, HIT
+x-cache-hits: 1, 1
+x-timer: S1613981202.510523,VS0,VE1
+strict-transport-security: max-age=63072000; includeSubDomains
+content-length: 43070
+X-Firefox-Spdy: h2
+ original-response-headers server: nginx
+content-type: text/html; charset=utf-8
+x-frame-options: DENY
+cache-control: max-age=604800, public
+via: 1.1 vegur, 1.1 varnish, 1.1 varnish
+accept-ranges: bytes
+date: Mon, 22 Feb 2021 08:06:41 GMT
+age: 229837
+x-served-by: cache-bwi5135-BWI, cache-fra19140-FRA
+x-cache: HIT, HIT
+x-cache-hits: 1, 1
+x-timer: S1613981202.510523,VS0,VE1
+strict-transport-security: max-age=63072000; includeSubDomains
+content-length: 43070
+X-Firefox-Spdy: h2
+ ctid 1 uncompressed-len 0 net-response-time-onstart 134 net-response-time-onstop 254 predictor::resource-count 10 predictor::https://www.python.org/static/js/libs/modernizr.js 1,1,1613981198,4096 predictor::https://www.python.org/static/stylesheets/style.b50cef9e3bb9.css 1,1,1613981198,4096 predictor::https://www.python.org/static/stylesheets/mq.eef77a5d2257.css 1,1,1613981198,4096 predictor::https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css 1,1,1613981198,4096 predictor::https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js 1,1,1613981198,4096 predictor::https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js 1,1,1613981198,4096 predictor::https://www.python.org/static/js/libs/masonry.pkgd.min.js 1,1,1613981198,4096 predictor::https://www.python.org/static/js/libs/html-includes.js 1,1,1613981198,4096 predictor::https://www.python.org/static/js/main-min.76b776ba706b.js 1,1,1613981198,4096 predictor::https://ssl.google-analytics.com/ga.js 1,1,1613981198,4096   ¨>
