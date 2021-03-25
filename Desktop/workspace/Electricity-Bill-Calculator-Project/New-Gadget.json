@@ -1,0 +1,33 @@
+{
+	"user_new_tv":
+	{
+		"new_name":"",
+		"new_size":"",
+		"new_type":""	
+	},
+
+
+	"user_new_computer":
+	{
+		"new_name":""	
+	}
+	
+	"our_update":
+	[
+		"updated_tv":
+		{
+			"updated_name":"",
+			"updated_size":"",
+			"updated_type":"",
+			"updated_usage":""
+		}	
+	]
+	[
+		"updated_computer":
+		{
+			"updated_name":"",
+			"updated_usage":""
+
+		}
+	]
+}
