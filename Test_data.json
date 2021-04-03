@@ -1,0 +1,38 @@
+[
+  {
+    "Model": "asd",
+    "Hours": 123,
+    "Usage": 0
+  },
+  {
+    "Model": "askdnaksjdnajk",
+    "Type": "LED",
+    "Size": 123,
+    "Hours": 123,
+    "Usage": 0
+  },
+  {
+    "Model": "askdndasdn",
+    "Hours": 123,
+    "Usage": 0
+  },
+  {
+    "Model": "asdasdas",
+    "Type": "LED",
+    "Size": 123,
+    "Hours": 123,
+    "Usage": 0
+  },
+  {
+    "Model": "asdas",
+    "Type": "LED",
+    "Size": 213.0,
+    "Hours": 123.0,
+    "Usage": 0
+  },
+  {
+    "Model": "jkasndjkasn",
+    "Hours": 123.0,
+    "Usage": 0
+  }
+]
