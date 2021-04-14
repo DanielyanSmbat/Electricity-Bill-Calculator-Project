@@ -22,7 +22,7 @@ def user_data_tv():
             "Type":"",
             "Size": 0,
             "Hours":0,
-            "Usage": 0
+            "Bill": 0
             }
     
     user_tv["Model"]= input("Please insert the model of your TV: ")
@@ -30,17 +30,39 @@ def user_data_tv():
     user_tv["Size"]= Numeric_Check("Please insert the size of your TV by inches: ")
     user_tv["Hours"]= Numeric_Check("Please insert the average hours of TV used per day: ")
 
-    return user_tv
+    
+    
 
+    if (user_tv["Type"] == 'LCD' and user_tv["Size"]== 32):
+       
+        user_tv["Bill"] = user_tv["Hours"]*((60/1000)*32.48)
+    
+    elif (user_tv["Type"] == 'LED'and user_tv["Size"]== 32):
+
+        user_tv["Bill"]= user_tv["Hours"]*((50/1000)*32.48)
+
+    elif (user_tv["Type"] == 'Plasma' and user_tv["Size"]== 32):
+
+        user_tv["Bill"] = user_tv["Hours"]*((150/1000)*32.48)
+        
+
+    print( '\n' "Bill of your TV in drams for " ,user_tv["Hours"]," hours is ",user_tv["Bill"], " in AMD " '\n' )
+    
+    return user_tv
 
 def user_data_comp():
     user_comp ={
             "Model":"",
             "Hours":0,
-            "Usage":0
+            "Bill":0
             }
     user_comp["Model"]= input("Please insert the model of your computer: ")
     user_comp["Hours"]= Numeric_Check("Please insert the average hours of computer used: ")
+    
+    user_comp["Bill"] = user_comp["Hours"] * ((65/1000)*32.48) 
+    
+    print( '\n' "Bill of your Computer in drams for " ,user_comp["Hours"]," hours is ",user_comp["Bill"], " in  AMD " '\n')
+    
     return user_comp
 
 
@@ -72,6 +94,7 @@ def save_data(user_gadgets):
 
 
 
+
 def main():
 
     
@@ -93,6 +116,8 @@ def main():
         print('\n' "Good Job!" '\n')
         user_comp = user_data_comp()
         user_gadgets.append(user_comp)
+        
+        print('\n' "Overall bill is ", user_tv["Bill"] + user_comp["Bill"] , " AMD " '\n')
 
     elif(check_gadget_tv == "No" and check_gadget_comp == "No"):
         print("You have no gadgets!")
