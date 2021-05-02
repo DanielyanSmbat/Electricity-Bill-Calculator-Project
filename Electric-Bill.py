@@ -29,6 +29,7 @@ def user_data_tv():
     user_tv["Type"]= check_type("Please insert the type of your TV by Plasma,LED or LCD: ")
     user_tv["Size"]= Numeric_Check("Please insert the size of your TV by inches: ")
     user_tv["Hours"]= Numeric_Check("Please insert the average hours of TV used per day: ")
+    user_tv["Days"]= Numeric_Check("Please insert the amount of days that you want to calculate: ")
 
     
     
@@ -36,7 +37,8 @@ def user_data_tv():
     if (user_tv["Type"] == 'LCD' and user_tv["Size"]== 32):
        
         user_tv["Bill"] = user_tv["Hours"]*((60/1000)*32.48)
-    
+
+
     elif (user_tv["Type"] == 'LED'and user_tv["Size"]== 32):
 
         user_tv["Bill"]= user_tv["Hours"]*((50/1000)*32.48)
@@ -44,9 +46,32 @@ def user_data_tv():
     elif (user_tv["Type"] == 'Plasma' and user_tv["Size"]== 32):
 
         user_tv["Bill"] = user_tv["Hours"]*((150/1000)*32.48)
+    
+    elif (user_tv["Type"] == 'LCD'and user_tv["Size"]== 50 ):
         
+        user_tv["Bill"]= user_tv["Hours"]*((50/1000)*150)
+    
+    elif (user_tv["Type"] == 'LED' and user_tv["Size"]== 50):
+        
+        user_tv["Bill"] = user_tv["Hours"]*((150/1000)*100)
+    
+    elif (user_tv["Type"] == 'Plasma'and user_tv["Size"]== 50):
 
-    print( '\n' "Bill of your TV in drams for " ,user_tv["Hours"]," hours is ",user_tv["Bill"], " in AMD " '\n' )
+        user_tv["Bill"]= user_tv["Hours"]*((50/1000)*300)
+
+    elif (user_tv["Type"] == 'LCD' and user_tv["Size"]== 42):
+
+        user_tv["Bill"] = user_tv["Hours"]*((150/1000)*120)
+    
+    elif (user_tv["Type"] == 'LED'and user_tv["Size"]== 42 ):
+        
+        user_tv["Bill"]= user_tv["Hours"]*((50/1000)*80)
+    
+    elif (user_tv["Type"] == 'Plasma' and user_tv["Size"]== 42):
+        
+        user_tv["Bill"] = user_tv["Hours"]*((150/1000)*220)
+
+    print( '\n' "Bill of your TV in drams for " ,user_tv["Hours"]," hours during ",user_tv["Days"]," days is ",user_tv["Bill"]*user_tv["Days"], " in AMD " '\n' )
     
     return user_tv
 
@@ -58,8 +83,8 @@ def user_data_comp():
             }
     user_comp["Model"]= input("Please insert the model of your computer: ")
     user_comp["Hours"]= Numeric_Check("Please insert the average hours of computer used: ")
-    
     user_comp["Bill"] = user_comp["Hours"] * ((65/1000)*32.48) 
+    user_tv["Days"]= Numeric_Check("Please insert the amount of days that you want to calculate: ")
     
     print( '\n' "Bill of your Computer in drams for " ,user_comp["Hours"]," hours is ",user_comp["Bill"], " in  AMD " '\n')
     
@@ -78,13 +103,11 @@ def Numeric_Check(user_input):
 
 
 def existing_gadget():
-    if(os.path.exists("Test_data.json")):
-        with open('Test_data.json') as file_data:
-            print(file_data)
-            user_gadgets = json.load(file_data)
-            return user_gadgets
-    else:
-        return []
+
+    with open('Test_data.json') as file_data:
+        user_gadgets = json.load(file_data)
+        return user_gadgets
+
 
 
 def save_data(user_gadgets):
@@ -110,25 +133,31 @@ def main():
     
     check_gadget_tv = input("Do you have a TV please answer 'Yes' or 'No': " '\n')
     check_gadget_comp = input("Do you have a computer please answer 'Yes' or 'No': "'\n')
-    if(check_gadget_tv == "Yes" and check_gadget_comp == "Yes"):
-        user_tv = user_data_tv()
-        user_gadgets.append(user_tv)
-        print('\n' "Good Job!" '\n')
-        user_comp = user_data_comp()
-        user_gadgets.append(user_comp)
-        
-        print('\n' "Overall bill is ", user_tv["Bill"] + user_comp["Bill"] , " AMD " '\n')
 
-    elif(check_gadget_tv == "No" and check_gadget_comp == "No"):
-        print("You have no gadgets!")
-    elif(check_gadget_tv == "Yes" and check_gadget_comp == "No"):
-        user_tv = user_data_tv()
-        user_gadgets.append(user_tv)
-    elif(check_gadget_tv == "No" and check_gadget_comp == "Yes"):
-        user_comp = user_data_comp()
-        user_gadgets.append(user_comp)
-    else:
-        print('\n' "Please answer with only Yes or No" '\n')
+
+     if(check_gadget_tv == "Yes" and check_gadget_comp == "Yes"):
+         user_tv = user_data_tv()
+            user_gadgets.append(user_tv)
+            print('\n' "Good Job!" '\n')
+            user_comp = user_data_comp()
+            user_gadgets.append(user_comp)
+            print('\n' "Overall bill is ", user_tv["Bill"] + user_comp["Bill"] , " AMD " '\n')
+
+        elif(check_gadget_tv == "No" and check_gadget_comp == "No"):
+            print("You have no gadgets!")
+        elif(check_gadget_tv == "Yes" and check_gadget_comp == "No"):
+            user_tv = user_data_tv()
+            user_gadgets.append(user_tv)
+        elif(check_gadget_tv == "No" and check_gadget_comp == "Yes"):
+            user_comp = user_data_comp()
+            user_gadgets.append(user_comp)
+        else:
+            print ('\n' "Please answer with only Yes or No" '\n')
+
+
+
+        
+        
         
 
   

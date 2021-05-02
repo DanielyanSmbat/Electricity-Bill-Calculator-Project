@@ -1,14 +1,30 @@
 [
   {
-    "Model": "kakjdnask",
+    "Model": "asd",
+    "Type": "LED",
+    "Size": 50.0,
+    "Hours": 10.0,
+    "Bill": 48.71999999999999
+  },
+  {
+    "Model": "asd",
+    "Type": "LED",
+    "Size": 32.0,
+    "Hours": 12.0,
+    "Bill": 19.488,
+    "Days": 10.0
+  },
+  {
+    "Model": "sada",
     "Type": "LED",
     "Size": 32.0,
     "Hours": 10.0,
-    "Bill": 16.24
+    "Bill": 16.24,
+    "Days": 10.0
   },
   {
-    "Model": "jkasnjdn",
-    "Hours": 10.0,
-    "Bill": 21.112
+    "Model": "asd",
+    "Hours": 123.0,
+    "Bill": 259.6776
   }
 ]
