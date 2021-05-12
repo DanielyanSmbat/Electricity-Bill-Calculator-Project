@@ -1,0 +1,137 @@
+{
+	"Gadgets": {
+			"Tv": {
+				"model":[
+
+					{
+						"name":"Insignia NS-32DF310NA19" ,
+						"siz in inches":32,
+						"type":"LED" ,
+						"Average usage/wph":"50"
+					},
+
+					{
+						"name":"TCL Roku" ,
+						"size in inches":50,
+						"type":"LED" ,
+						"Average usage/wph":"100"
+					},
+
+					{
+						"name":"Toshiba 32LF221U21" ,
+						"size in inches":32,
+						"type":"LED" ,
+						"Average usage":"50"
+					},
+			
+					{
+						"name":"SAMSUNG Class Crystal" ,
+						"size in inches":55,
+						"type":"Plasma" ,
+						"Average usage":"300"
+					},
+				
+					{
+						"name":"Hisense Class H4 Series" ,
+						"size in inches":40,
+						"type":"LED" ,
+						"Average usage":"80"
+					},
+
+					{
+						"name":"Insignia NS-24DF310NA21" ,
+						"size in inches":24,
+						"type":"LED" ,
+						"Average usage":"50"
+					},
+			
+					{
+						"name":"LG Electronics 24LM530S-PU" ,
+						"size in inches":24,
+						"type":"LCD" ,
+						"Average usage":"50"
+					},
+				
+					{
+						"name":"Samsung Electronics UN32N5300AFXZA" ,
+						"size in inches":32,
+						"type":"LCD" ,
+						"Average usage":"70"
+					},
+				
+					{
+						"name":"VIZIO M-Series Quantum" ,
+						"size in inches":50,
+						"type":"LCD" ,
+						"Average usage":"150"
+					},
+					{
+						"name":"Sony X900H" ,
+						"size in inches":65,
+						"type":"LED" ,
+						"Average usage":"120"
+					}
+			]
+	},
+
+
+		"Computers" : {
+					"model": [
+						{
+							"name":"HP 15 HD Touchscreen Premium Laptop" ,
+							"Average usage/wph":"41"
+						},
+
+						{
+							"name":"Dell Inspiron 15 3000Laptop:" ,
+							"Average usage":"45"
+						},
+						
+						{
+							"name":"ASUS Chromebook C223 Laptop" ,
+							"Average usage":"45"
+						},
+					
+						{
+							"name":"Acer Aspire 5 15.6",
+							"Average usage":"45"
+						},
+					
+						{
+							"name":"Toshiba Chromebook 2 CB35-B3330 ",
+							"Average usage":"45"
+						},
+					
+
+						{
+							"name":"Acer Chromebook  CB3-111" ,
+							"Average usage":"65"
+						},
+					
+						{
+							"name":"Macbook air" ,
+							"Average usage":"35"
+						},
+					
+						{
+							"name":"HP2000-2b09WM" ,
+							"Average usage":"65"
+						},
+					
+						{
+							"name":"Dell Latitude E5430" ,
+							"Average usage":"65"
+						},
+				
+						{
+							"name":"Macbook Pro" ,
+							"Average usage":"60"
+						}
+					]
+
+			}
+		
+		}
+
+}
+
