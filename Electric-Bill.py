@@ -84,7 +84,7 @@ def user_data_comp():
     user_comp["Model"]= input("Please insert the model of your computer: ")
     user_comp["Hours"]= Numeric_Check("Please insert the average hours of computer used: ")
     user_comp["Bill"] = user_comp["Hours"] * ((65/1000)*32.48) 
-    user_tv["Days"]= Numeric_Check("Please insert the amount of days that you want to calculate: ")
+    user_comp["Days"]= Numeric_Check("Please insert the amount of days that you want to calculate: ")
     
     print( '\n' "Bill of your Computer in drams for " ,user_comp["Hours"]," hours is ",user_comp["Bill"], " in  AMD " '\n')
     
@@ -109,65 +109,43 @@ def existing_gadget():
         return user_gadgets
 
 
-
 def save_data(user_gadgets):
     f = open("Test_data.json","w")
     f.write(json.dumps(user_gadgets,indent=2))
     f.close()
 
 
-
-
 def main():
-
     
     print("Welcome to Electricity Bill Calculator!"'\n')
-    
-
     user_gadgets = []
-    
     user_gadgets = existing_gadget()
 
-
-
-    
     check_gadget_tv = input("Do you have a TV please answer 'Yes' or 'No': " '\n')
     check_gadget_comp = input("Do you have a computer please answer 'Yes' or 'No': "'\n')
 
+    if(check_gadget_tv == "Yes" and check_gadget_comp == "Yes"):
+        user_tv = user_data_tv()
+        user_gadgets.append(user_tv)
+        print('\n' "Good Job!" '\n')
+        user_comp = user_data_comp()
+        user_gadgets.append(user_comp)
+        print('\n' "Overall bill is ", user_tv["Bill"] + user_comp["Bill"] , " AMD " '\n')
 
-     if(check_gadget_tv == "Yes" and check_gadget_comp == "Yes"):
-         user_tv = user_data_tv()
-            user_gadgets.append(user_tv)
-            print('\n' "Good Job!" '\n')
-            user_comp = user_data_comp()
-            user_gadgets.append(user_comp)
-            print('\n' "Overall bill is ", user_tv["Bill"] + user_comp["Bill"] , " AMD " '\n')
+    elif(check_gadget_tv == "No" and check_gadget_comp == "No"):
+        print("You have no gadgets!")
+    elif(check_gadget_tv == "Yes" and check_gadget_comp == "No"):
+        user_tv = user_data_tv()
+        user_gadgets.append(user_tv)
+    elif(check_gadget_tv == "No" and check_gadget_comp == "Yes"):
+        user_comp = user_data_comp()
+        user_gadgets.append(user_comp)
+    else:
+        print ('\n' "Please answer with only Yes or No" '\n')
 
-        elif(check_gadget_tv == "No" and check_gadget_comp == "No"):
-            print("You have no gadgets!")
-        elif(check_gadget_tv == "Yes" and check_gadget_comp == "No"):
-            user_tv = user_data_tv()
-            user_gadgets.append(user_tv)
-        elif(check_gadget_tv == "No" and check_gadget_comp == "Yes"):
-            user_comp = user_data_comp()
-            user_gadgets.append(user_comp)
-        else:
-            print ('\n' "Please answer with only Yes or No" '\n')
-
-
-
-        
-        
-        
-
-  
 
     save_data(user_gadgets)
 
-
-
-
-     
 
 main()
 

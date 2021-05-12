@@ -26,5 +26,35 @@
     "Model": "asd",
     "Hours": 123.0,
     "Bill": 259.6776
+  },
+  {
+    "Model": "LG",
+    "Type": "LCD",
+    "Size": 32.0,
+    "Hours": 10.0,
+    "Bill": 19.487999999999996,
+    "Days": 5.0
+  },
+  {
+    "Model": "LG",
+    "Type": "LCD",
+    "Size": 32.0,
+    "Hours": 5.0,
+    "Bill": 9.743999999999998,
+    "Days": 5.0
+  },
+  {
+    "Model": "LG",
+    "Type": "LCD",
+    "Size": 32.0,
+    "Hours": 2.0,
+    "Bill": 3.8975999999999993,
+    "Days": 3.0
+  },
+  {
+    "Model": "L",
+    "Hours": 1.0,
+    "Bill": 2.1111999999999997,
+    "Days": 1.0
   }
 ]
