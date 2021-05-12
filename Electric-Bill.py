@@ -2,11 +2,6 @@ import json
 import os.path
 
 
-
-
-
-
-
 def check_type(user_type):
     while(True):
         user_data = input(user_type)
@@ -32,44 +27,14 @@ def user_data_tv():
     user_tv["Days"]= Numeric_Check("Please insert the amount of days that you want to calculate: ")
 
     
-    
+    if (user_tv["Type"] == 'LED'):       
+        user_tv["Bill"] = user_tv["Size"]*(1.834/1000)*39.980
+    elif (user_tv["Type"] == 'LCD'):
+        user_tv["Bill"] = user_tv["Size"]*(2.6/1000)*39.980
+    elif (user_tv["Type"] == 'Plasma'):
+        user_tv["Bill"] = user_tv ["Size"]*(5.4/1000)*39.980
 
-    if (user_tv["Type"] == 'LCD' and user_tv["Size"]== 32):
-       
-        user_tv["Bill"] = user_tv["Hours"]*((60/1000)*32.48)
 
-
-    elif (user_tv["Type"] == 'LED'and user_tv["Size"]== 32):
-
-        user_tv["Bill"]= user_tv["Hours"]*((50/1000)*32.48)
-
-    elif (user_tv["Type"] == 'Plasma' and user_tv["Size"]== 32):
-
-        user_tv["Bill"] = user_tv["Hours"]*((150/1000)*32.48)
-    
-    elif (user_tv["Type"] == 'LCD'and user_tv["Size"]== 50 ):
-        
-        user_tv["Bill"]= user_tv["Hours"]*((50/1000)*150)
-    
-    elif (user_tv["Type"] == 'LED' and user_tv["Size"]== 50):
-        
-        user_tv["Bill"] = user_tv["Hours"]*((150/1000)*100)
-    
-    elif (user_tv["Type"] == 'Plasma'and user_tv["Size"]== 50):
-
-        user_tv["Bill"]= user_tv["Hours"]*((50/1000)*300)
-
-    elif (user_tv["Type"] == 'LCD' and user_tv["Size"]== 42):
-
-        user_tv["Bill"] = user_tv["Hours"]*((150/1000)*120)
-    
-    elif (user_tv["Type"] == 'LED'and user_tv["Size"]== 42 ):
-        
-        user_tv["Bill"]= user_tv["Hours"]*((50/1000)*80)
-    
-    elif (user_tv["Type"] == 'Plasma' and user_tv["Size"]== 42):
-        
-        user_tv["Bill"] = user_tv["Hours"]*((150/1000)*220)
 
     print( '\n' "Bill of your TV in drams for " ,user_tv["Hours"]," hours during ",user_tv["Days"]," days is ",user_tv["Bill"]*user_tv["Days"], " in AMD " '\n' )
     
@@ -83,13 +48,13 @@ def user_data_comp():
             }
     user_comp["Model"]= input("Please insert the model of your computer: ")
     user_comp["Hours"]= Numeric_Check("Please insert the average hours of computer used: ")
-    user_comp["Bill"] = user_comp["Hours"] * ((65/1000)*32.48) 
+    user_comp["Wattage"]=Numeric_Check("Please insert the average Watt of your Computer: ")
+    user_comp["Bill"] = user_comp["Hours"] * ((user_comp["Wattage"]/1000)*32.48) 
     user_comp["Days"]= Numeric_Check("Please insert the amount of days that you want to calculate: ")
     
     print( '\n' "Bill of your Computer in drams for " ,user_comp["Hours"]," hours is ",user_comp["Bill"], " in  AMD " '\n')
     
     return user_comp
-
 
 
 def Numeric_Check(user_input):
@@ -108,12 +73,10 @@ def existing_gadget():
         user_gadgets = json.load(file_data)
         return user_gadgets
 
-
 def save_data(user_gadgets):
     f = open("Test_data.json","w")
     f.write(json.dumps(user_gadgets,indent=2))
     f.close()
-
 
 def main():
     

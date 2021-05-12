@@ -56,5 +56,70 @@
     "Hours": 1.0,
     "Bill": 2.1111999999999997,
     "Days": 1.0
+  },
+  {
+    "Model": "10",
+    "Type": "LCD",
+    "Size": 10.0,
+    "Hours": 32.0,
+    "Bill": 0,
+    "Days": 2.0
+  },
+  {
+    "Model": "2",
+    "Hours": 2.0,
+    "Bill": 4.2223999999999995,
+    "Days": 2.0
+  },
+  {
+    "Model": "LG",
+    "Type": "LED",
+    "Size": 32.0,
+    "Hours": 5.0,
+    "Bill": 2.34634624,
+    "Days": 5.0
+  },
+  {
+    "Model": "Yes",
+    "Hours": 2.0,
+    "Bill": 4.2223999999999995,
+    "Days": 2.0
+  },
+  {
+    "Model": "Lg",
+    "Type": "LED",
+    "Size": 5555.0,
+    "Hours": 10.0,
+    "Bill": 407.31104259999995,
+    "Days": 10.0
+  },
+  {
+    "Model": "yes",
+    "Hours": 4.0,
+    "Bill": 8.444799999999999,
+    "Days": 4.0
+  },
+  {
+    "Model": "LG",
+    "Type": "LED",
+    "Size": 50.0,
+    "Hours": 1.0,
+    "Bill": 3.666166,
+    "Days": 1.0
+  },
+  {
+    "Model": "LG",
+    "Hours": 1.0,
+    "Bill": 1.9487999999999996,
+    "Wattage": 60.0,
+    "Days": 1.0
+  },
+  {
+    "Model": "AMm",
+    "Type": "LED",
+    "Size": 70.0,
+    "Hours": 4.0,
+    "Bill": 5.1326324,
+    "Days": 1.0
   }
 ]
